@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">fieldset { border-radius: 10px; }</style>
+	<meta name="keywords" content="CCG,Commission of Counter Ghoul">
+	<meta name="author" content="190021959 Tang Ho Lung">
+	<title>Commission of Counter Ghoul</title>
+	<link rel="stylesheet" href="CSS.css">
+	
+	<script>
+		function print_result(){
+		
+		var ID = document.f1.ID.value;
+		alert("UserID =" + ID);
+		
+		var password = document.f1.pwd.value;
+		alert("Password =" + password);
+		
+		var name = document.f1.name.value;
+		alert("Name =" + name);
+		
+		var phoneno = document.f1.phoneno.value;
+		alert("PhoneNo =" + phoneno);
+		
+		}
+	</script>
+	
+</head>
+<body>
+
+	<input type="checkbox" id="chec">
+	<label for="chec">
+		<img src="pic/menu.png">
+	</label>
+	<nav>
+		<ul>
+			<li><a href="main.html">Home</a></li>
+			<li><a href="register.html">Register</a></li>
+			<li><a href="character.html">character</a></li>
+		</ul>
+	</nav>
+	<br />
+	<p>
+	<div id="header">
+	 <center><div><h1>CCG Fan Club</h1>(This is just a simulated application form for members to enhance the sense of substitution!You can leave it blank except for items with *)</div></center>
+	</div>
+	
+	<div id="form">
+	<form method="post" enctype="multipart/form-data" name="f1"  onSubmit="print_result()" >
+		 <input name="region" type="hidden" value="Asia" />
+		 
+		 <fieldset>
+		 
+		 <legend>CCG Application form</legend>
+		 
+		 *UserID : <input type="text" name="ID" required="required" /><br />
+		 
+		 *Password : <input type="password" name="pwd" pattern="^([A-Za-z0-9]{6,16})?" required="required" title="The password should be 6 to 16 word without symbol." /><br />
+		 
+		 *Name : <input type="text" name="name" required="required" /><br />
+		 
+		 *Phone No : <input name="phoneno" type="text" pattern="^([0-9]{8})?" required="required" title="Input your 8 number phoneNo." /><br />
+		 
+		  DoB :
+		 <input type="date" />
+		 <br />
+		 
+		 Apply for a position :
+			 <input type="radio" value="C" checked="checked" name="clerk" />
+			 Clerk
+			 <input type="radio" value="A" name="agent" />
+			 CCG  Search Officer <br />
+			 
+		 Zone selection :
+		 <select name="zone">
+			 <optgroup label="Most dangerous area">
+				<option value="MD">Zone 1-4</option>
+			</optgroup>
+				<optgroup label="Second danger zone">
+				<option value="SD">Zone 5-14</option>
+				</optgroup>
+			<optgroup label="Relatively safe area">
+			<option value="RS" selected="selected">Zone 15-23</option>
+			</optgroup>
+				<optgroup label="Special area">
+				<option value="S">Zone 24</option>
+				</optgroup>
+		 </select>
+		 <br />
+		 
+		 Join method :
+		 <input name="F1" value="P" type="checkbox" checked="checked" />Personal training
+		 <input name="F2" value="R" type="checkbox" />Recommended by the staff
+		 <input name="F3" value="S" type="checkbox" />CCG  Search Officer nurturing school Graduate
+		 
+		 </fieldset>
+		 
+		 <fieldset>
+		 <legend>Other records:</legend>
+		 <textarea name="comment" cols="80" rows="6" >If you have other records, you can enter here, In less 200 words... </textarea> <br />
+		 Send us any photo : <input type="file" name="photo" /><br />
+		
+		 </fieldset>		 
+		 <input type="submit" value="Join Us" />
+		 <input type="reset" value="Clear Date" />
+		 
+	 </form>
+	 </div>
+</body>
+</html>

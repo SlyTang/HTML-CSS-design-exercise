@@ -1,0 +1,150 @@
+*{
+	padding: 0px;
+	margin: 0px:
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	display: block;
+	padding: 20px 5px;
+	color: white;
+}
+
+a:hover
+{
+	background-color: rgba(176,224,230);
+	color: black;
+}
+
+body{
+	font-family: arial;
+	background: url("pic/TKG.jpg");
+	background-size: cover;
+}
+
+input[type="checkbox"]:checked ~ nav
+{
+	transform: translateX(350px);
+}
+
+ul{
+	list-style: none;
+}
+img{
+	width: 40px;
+}
+
+#chec
+{
+	display: none;
+}
+
+nav
+{
+	background-color: rgba(16,16,16,.5);
+	width: 350px;
+	height: 100%;
+	left: -350px;
+	position: absolute;
+	transition: all .5s;
+}
+
+ul
+{	
+	top: 50px;
+	position: absolute;
+	width: 100%;
+}
+
+label
+{
+	padding: 15px;
+	position: absolute;
+	z-index: 1;
+}
+
+
+form {
+  text-align: center;
+	}
+#form { 
+		height: auto;
+		background-color: rgba(245, 245, 245,0.5);
+		width: auto; 
+		flex-grow: 1;
+	}
+
+	#header, #main, #aside, #footer {
+		background-color: rgba(255, 218, 185,0.8);
+		border: 1px solid black; 
+		border-radius: 8px; 
+		margin: 5px; 
+		padding: 15px; 
+	}
+	#flex-container { 
+		flex-direction:column;
+		display: flex; 
+		flex-flow: row wrap; 
+		justify-content:flex-end;
+	}
+	#header div { 
+		clear: none; 
+	}
+	#header { 
+		order: 1; 
+		height: auto; 
+		width: 100%; 
+		margin-top: 60px;
+	}
+
+	#main { 
+		order: 2;
+		background-color: rgba(224, 255, 255,0.5);
+		width: 70%;
+		flex-grow: 1;
+	}
+	#aside { 
+		order: 3;
+		width: 20%; 
+	}
+	#footer { 
+		order: 4;
+		height: 50px;
+		width: 100%; 
+		float: left;
+	}
+
+@media only screen and (max-width: 1000px) {
+	 body {
+		 background: url("pic/NY2.png")
+	}
+	 #main { 
+		 order: 3; 
+		 height: auto;
+		 background: #FCC; 
+		 width: 10px;
+		 -webkit-column-count: 3; 
+		 flex-grow: 1; 
+	 }
+	 #main h1 { 
+		line-height: 0.2; 
+		-webkit-column-span: all; 
+	 }
+	 #aside { 
+		order: 2; 
+		width: 20%; 
+	 }
+ 
+@media only screen and (max-width: 800px) {
+	 #main { 
+		height: auto; background: #FFC; 
+	 }
+	 #aside { 
+		display: none; 
+	 }
+}
+
+#table img{
+	width:100%;
+}
